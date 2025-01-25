@@ -1,0 +1,58 @@
+<h1 class="header_logo1">WALL DECOR</h1>
+
+    <div class="pro-div">
+        <div class="pro_div-div">
+            <div class="pro_div">
+                <h1 class="pro_h1" onclick="showCategory('ALL')">ALL GOODS</h1>
+                <div class="pro_div1 active"></div>
+            </div>
+            <div class="pro_div">
+                <h1 class="pro_h1" onclick="showCategory('PAINTINGS')">PAINTINGS</h1>
+                <div class="pro_div2"></div>
+            </div>
+            <div class="pro_div">
+                <h1 class="pro_h1" onclick="showCategory('WALL PANELS')">WALL PANELS</h1>
+                <div class="pro_div3"></div>
+            </div>
+            <div class="pro_div">
+                <h1 class="pro_h1" onclick="showCategory('FIGURES')">FIGURES</h1>
+                <div class="pro_div4"></div>
+            </div>
+            <div class="pro_div">
+                <h1 class="pro_h1" onclick="showCategory('LETTERING')">LETTERING</h1>
+                <div class="pro_div5"></div>
+            </div>
+        </div>
+        <div class="pro_div-div">
+            <form method="get" action="{% url 'Home' %}">
+                <select class="sele" name="sort" id="sort" onchange="this.form.submit()">
+                    <option class="pro_p" value="popularity" {% if request.GET.sort == 'popularity' %}selected{% endif %}>Popularity</option>
+                    <option class="pro_p" value="date" {% if request.GET.sort == 'date' %}selected{% endif %}>Newest</option>
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+<div class="post-div">
+{% for comment in comments %}
+<div class="post_div product {{ comment.section }}">
+    <p class="post_p">{{ comment.section }}</p>
+    <a href="{% url 'Product' post_id=comment.id %}">
+        <img width="300px" height="222px" class="post_img" src="{{ comment.photo }}" alt="{{ comment.title }}">
+        <p class="post_name"><i>{{ comment.title }}</i></p>
+        <div class="post_div_button">
+            <p class="post_price">{{ comment.price }}</p>
+            {% if request.user.is_authenticated %}
+                <button id="like-button-{{ comment.id }}" data-url="{% url 'toggle_like' comment.id 'home' %}" class="post_button post_button1">
+                    <img id="like-icon-{{ comment.id }}" width="15px" height="15px" src="{% if request.user in comment.likes.all %} /static/images/free-icon-heart-2107845.png {% else %} /static/images/free-icon-heart-shape-outline-25424.png {% endif %}" alt="">
+                    <span id="like-count-{{ comment.id }}">{{ comment.likes.count }}</span>
+                </button>
+            {% endif %}
+            <button class="add-to-cart post_button post_button1" data-product-id="{{ comment.id }}" data-product-name="{{ comment.title }}">Добавить в корзину</button>
+        </div>
+    </a>
+</div>
+{% endfor %}
+</div>

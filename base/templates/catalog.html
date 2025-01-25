@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+  {% include "header.html" %}
+  <h1 class="header_logo1">CATALOG</h1>
+  <div class="catalog-div-div">
+    <div class="div_catalog">
+      <img width="422px" height="345px" class="catalog_img" src="/static/images/pexels-daiangan-102127.jpg" alt="">
+          <h1 class="catalog_h1">Paintings category</h1>
+          <a class="catalog-a" href="{% url 'catalog_by_category' 'PAINTINGS' %}" ><button class="catalog_button">Buy by category</button></a>
+    </div>
+    <div class="div_catalog">
+      <img width="422px" height="345px" class="catalog_img" src="/static/images/pexels-itzmebarzy-23092197.jpg" alt="">
+      <a class="catalog-a" href="{% url 'catalog_by_category' 'FIGURES' %}"><button class="catalog_button catalog_button2">Buy by category</button></a>
+          <h1 class="catalog_h1 catalog_h12">Figures category</h1>
+    </div>
+    <div class="div_catalog">
+      <img width="422px" height="345px" class="catalog_img" src="/static/images/pexels-julia-solodovnikova-2581492-4712363.jpg" alt="">
+          <h1 class="catalog_h1">Wall panels category</h1>
+          <a class="catalog-a"  href="{% url 'catalog_by_category' 'WALL_PANELS' %}" ><button class="catalog_button">Buy by category</button></a>
+    </div>
+    <div class="div_catalog">
+      <img width="422px" height="345px" class="catalog_img" src="/static/images/pexels-knownasovan-57690.jpg" alt="">
+      <a class="catalog-a" href="{% url 'catalog_by_category' 'LETTERING' %}"><button class="catalog_button catalog_button2">Buy by category</button></a>
+      <h1 class="catalog_h1 catalog_h12">Lettering category</h1>
+    </div>
+  </div>
+{% endblock content %}

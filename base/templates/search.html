@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block content %}
+  {% include "header.html" %}
+
+  <form class="form_search" method="GET" action="{% url 'Search' %}">
+    <input class="search-input" type="search" placeholder="Search . . . " name="search">
+    <a class="search_a" href="{% url 'Search' %}"><img width='18px' height='18px' class="header_icon" src="/static/images/free-icon-search-4024513.png" alt="search"></a>
+    <button class="search_button" id="search" type="submit">Search</button>
+  </form>
+  {% include "base.html" %}
+{% endblock content %}

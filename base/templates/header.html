@@ -1,0 +1,29 @@
+
+<header class="header-home">
+    <h1 class="header-logo"><a href="{% url 'Home' %}">ST0re</a></h1>
+    <div class="header_div">
+      <div>
+        <a class="header_a" href="{% url 'Catalog' %}">CATALOG</a>
+        <a class="header_a" href="{% url 'Aboutus' %}">ABOUT US</a>
+        <a class="header_a" href="{% url 'Blog_views' %}">BLOG</a>
+        <a class="header_a" href="{% url 'Contact' %}">CONTACT</a>
+        <a class="header_a" href="{% url 'Shipping' %}">SHIPPING</a>
+      </div>
+      <div class="header_div1">
+        <a href="{% url 'Createproduct' %}"><img width='18px' height='18px' class="header_icon" src="/static/images/free-icon-plus-3303893.png" alt="plus"></a>
+        <a href="{% url 'Search' %}"><img width='18px' height='18px' class="header_icon" src="/static/images/free-icon-search-4024513.png" alt="search"></a>
+        <a href="{% url 'Like' %}"><img width='18px' height='18px' class="header_icon" src="/static/images/free-icon-heart-shape-outline-25424.png" alt="like"></a>
+        
+      <a href="{% url 'Bag'%}"><img width='18px' height='18px' class="header_icon" src="/static/images/free-icon-hand-bag-340426.png" alt="store"></a>
+
+        <a href="{% url 'Profile' %}"><img width='18px' height='18px' class="header_icon" src="/static/images/free-icon-user-profile-2734847.png" alt="profile"></a>
+      </div>
+    </div>
+  </header>
+  <div class="main_div">
+    <a href="{% url 'Home' %}" class="main_span">Main page</a>
+    <img class="main_img" width="10px" height="10px" src="/static/images/free-icon-right-arrow-271228.png" alt="right">
+    <a href="{% url 'Catalog' %}" class="main_span">Catalog</a>
+    <img class="main_img" width="10px" height="10px" src="/static/images/free-icon-right-arrow-271228.png" alt="right">
+    <a class="main_span" href="{% url 'Homedecor' %}">Home decor</a>
+  </div>

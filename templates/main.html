@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}" media="screen" type="text/css">
+    <script src="{% static 'js/index.js' %}" defer></script>
+</head>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    {% endif  %}
+    {% block content %}  
+    {% endblock content %} 
+</body>
+</html>

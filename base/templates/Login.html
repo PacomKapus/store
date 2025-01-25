@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="signup_div">
+  <div class="signup_div1">
+  <h1 class="signup_h1 signin_h1">Sign in</h1>
+  <p class="signup_p">Don't have an account?  <a class="signup_a" href="{% url 'Signup' %}">Login</a></p>
+  <form method="POST" action="">
+    {% if error != '' %}
+        <div class="errorlist">
+            {{ error }}
+        </div> 
+    {% endif %} 
+    {% csrf_token %}
+  <label>Email:</label>
+  <input class="signup_input" type="email" name="email" placeholder="Email" required>
+  <label>Password:</label>
+  <input class="signup_input" type="password" name="password" placeholder="Password" required>
+  <div><button type="submit" class="signup_button">Login</button></div>
+  </form>
+</div>
+<img width="555px" height="555px" class="signup_logo signup-lo" src="/static/images/nigel-tadyanehondo-3k5cAmxjXl4-unsplash.jpg" alt="logo">
+</div>
+{% endblock content %}

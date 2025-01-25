@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+  <div class="signup_div">
+  <div>
+    <h1 class="create-product">Create a new product</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="profile_login signup_button create-product-button" type="submit">Create item</button>
+    </form>      
+  </div>
+  </div> 
+
+{% endblock content %}

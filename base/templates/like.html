@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+
+{% block content %}
+  {% include "header.html" %}
+  
+        <h1 class="header_logo1">YOUR LIKES</h1>
+            {% for comment in comments %}
+            <div class="post-div product_div1">
+                <div class="post_div product product_div {{ comment.section }}">
+                    <p class="post_p product_p">{{ comment.section }}</p>
+                    <img width="300px" height="222px" class="post_img" src="{{ comment.photo }}" alt="{{ comment.title }}">
+                    <div class="product_div2">
+                        <p class="post_name">{{ comment.title }}</p>
+                    <div>
+                        <img width="16px" height="16px" class="post_star" src="/static/images/free-icon-star-616655.png" alt="">
+                        <img width="16px" height="16px" class="post_star" src="/static/images/free-icon-star-616655.png" alt="">
+                        <img width="16px" height="16px" class="post_star" src="/static/images/free-icon-star-616655.png" alt="">
+                        <img width="16px" height="16px" class="post_star" src="/static/images/free-icon-star-616655.png" alt="">
+                        <img width="16px" height="16px" class="post_star" src="/static/images/free-icon-star-616821.png" alt="">
+                    </div>
+                    <div class="post_div_button product_div_button">
+                        {% if request.user.is_authenticated %}
+                            <button id="like-button-{{ comment.id }}" data-url="{% url 'toggle_like' comment.id 'home' %}" class="post_button post_button1 product_button">
+                                <img id="like-icon-{{ comment.id }}" width="15px" height="15px" src="{% if request.user in comment.likes.all %} /static/images/free-icon-heart-2107845.png {% else %} /static/images/free-icon-heart-shape-outline-25424.png {% endif %}" alt="">
+                                <span id="like-count-{{ comment.id }}">{{ comment.likes.count }}</span>
+                            </button>
+                        {% endif %}
+        
+                        <form action="{% url 'add_to_cart' comment.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="post_button post-btn"><b>
+                                Add to cart</b></button>
+                        </form>                
+                    </div>
+                    <p class="post_price">Price:{{ comment.price }}</p>
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+{% endblock content %}

@@ -1,0 +1,701 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.header-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_div1 {
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+.main_div {
+    margin-top: 10px;
+}
+
+.signup_div {
+    display: flex;
+    justify-content: center;
+}
+
+.signup_div1 {
+    margin-left: 100px;
+}
+
+.profile_div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.input_div_profile {
+    position: relative;
+}
+
+.input_img_profile {
+    position: absolute;
+    left: 34%;
+    top: 29.5%;
+}
+
+.header-logo {
+    margin-left: 40px;
+}
+
+.header_logo1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+.signup_logo {
+    margin-left: 120px;
+    margin-top: 45px;
+}
+
+.header_a {
+    font-size: 18px;
+    margin-right: 18px;
+    transition: all 1s linear;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.header_a:hover {
+    background-color: rgb(128, 128, 251);
+    color: rgb(255, 255, 255);
+}
+
+.header_icon {
+    margin-right: 8px;
+}
+
+.main_img {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.main_span:first-child {
+    margin-left: 40px;
+}
+
+.main_span {
+    transition: all 1s;
+}
+
+.main_span:hover {
+    color: #b2b2b2;
+}
+
+input {
+    width: 323px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid #cac9e5;
+    padding-left: 10px;
+}
+
+.signup_h1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 45px;
+}
+
+.signin_h1 {
+    margin-top: 135px;
+}
+
+.signup_p {
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 10px 5px;
+    margin-top: 20px;
+    font-size: 10px;
+    display: block;
+}
+
+.signup_button {
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 333px;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 30px;
+    border: none;
+    transition: all 3s linear;
+}
+
+.signup_button:hover {
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.profile_button {
+    border: 1px solid #0f0f0f;
+    background-color: transparent;
+    width: 70px;
+    height: 30px;
+    font-size: 8px;
+    margin-left: 150px;
+    margin-top: 30px;
+    border-radius: 7px;
+    position: absolute;
+    background-color: rgb(223, 223, 223);
+}
+
+.profile_img {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+
+.profile_h1 {
+    margin-left: 15px;
+}
+
+.profile_img1 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.profile_img2 {
+    position: absolute;
+    top: -75px;
+}
+
+.profile_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.profile_username {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.profile_email {
+    margin-top: 10px;
+}
+
+.pro-div {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 9.5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pro_div-div {
+    display: flex;
+    align-items: center;
+}
+
+.pro_div {
+    margin-right: 30px;
+}
+
+.pro_div1, .pro_div2, .pro_div3, .pro_div4, .pro_div5 {
+    width: 30px;
+    height: 3.5px;
+    background-color: rgb(128, 128, 251);
+    display: none;
+}
+
+.pro_div1.active, .pro_div2.active, .pro_div3.active, .pro_div4.active, .pro_div5.active {
+    display: flex;
+}
+
+.active {
+    display: flex;
+}
+
+hr {
+    margin: 0;
+}
+
+.pro_p {
+    font-size: 15px ;
+    margin-right: 8px;
+}
+
+.post-div {
+    margin-left: 333px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post_div {
+    margin-top: 30px;
+    margin-right: 38px;
+    position: relative;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.post_div_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.post_img {
+    border-radius: 10px; 
+    margin-bottom: 10px;
+}
+
+.post_star:first-child {
+    margin-left: 8px;
+}
+
+.post_p {
+    position: absolute;
+    color: #FFFFFF;
+    background-color: rgb(128, 128, 251);
+    top: 5px;
+    left: -20px;
+    border-radius: 0 4px 4px 0;
+    padding: 10px 40px;
+    font-size: 15px;
+}
+
+.post_name {
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.post_button {
+    font-size: 12px;    
+    transition: all 1s;
+    border-radius: 30px;
+    border: 1px solid rgb(208, 208, 254);
+    background-color: transparent;
+    padding: 13px 18px;
+}
+
+.post_button1 {
+    margin-left: 50px;
+}
+
+.create-product {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    width: 323px;
+    border-radius: 12px;
+    border: 2px solid #cac9e5;
+}
+
+#id_section {
+    width: 323px;
+    border-radius: 12px;
+    height: 40px;   
+    border: 2px solid #cac9e5;
+}
+
+.create-product-button {
+    margin-bottom: 50px ;
+}
+
+.div_catalog {
+    position: relative;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    padding-top:30px ;
+    padding-left: 20px;
+    transition:all 2s linear;
+    width: 422px;
+    height: 345px;
+    border-radius: 20px;
+}
+
+.div_catalog:hover {
+    border: 10px double black ;
+}
+
+.catalog_img {
+    position: absolute;
+    border-radius: 20px;
+    z-index: -1;
+    transition: all 0.5s linear ;
+    top: 0;
+    left: 0;
+    filter: brightness(30%);
+    object-fit: cover;
+}
+
+.catalog_h1 {
+    color: #FFFFFF;
+    font-size: 38px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.catalog_h12 {
+    display: flex;
+    justify-content: end;
+    margin: auto;
+}
+
+.catalog_button {
+    border-radius: 50px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding:20px 35px ;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.catalog_button2 {
+    display: flex;
+    justify-content: end;  
+    margin: auto;
+    margin-top: 185px;
+    margin-right: 50px;
+}
+
+.catalog-div-div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section_heading {
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.section_content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-left: none;
+    border-radius:10px;
+}
+
+.section_content ul {
+    list-style-type: none;
+}
+
+.section_content ul li {
+    margin-bottom: 5px;
+}
+
+.social_links {
+    list-style-type: none;
+}
+
+.social_links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social_links li a {
+    color: #333;
+    transition: all 0.5s;
+}
+
+.social_links li a:hover {
+    color: #6d6d6d;
+}
+
+.social_links li p {
+    color: #333;
+    transition: all 0.5s;
+}
+
+.social_links li p:hover {
+    color: #6d6d6d;
+}
+
+.search-input {
+    margin-top: 30px;
+    margin-left: 3%;
+    width: 94%;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    padding-left: 45px;
+}
+
+.form_search {
+    position: relative;
+}
+
+.search_a {
+    position: absolute;
+    top: 56%;
+    left: 4%;
+}
+
+.search_button {
+    position: absolute;
+    top: 44%;
+    left: 89.8%;
+    border-radius: 50px;
+    padding: 13px 20px; 
+    border: none;
+    background-color: #000;
+    color: #fff;
+    transition: all 2s linear;
+}
+
+.search_button:hover {
+    background-color: rgb(128, 128, 251);
+    color: #000;
+}
+
+.blog_div p label {
+    display: none;
+}
+
+.blog_div p input {
+    margin-top: 10px;
+    width: 94%;
+    margin-left: 2.5%;
+    height: 50px;
+    border-radius: 50px;
+    padding-left:1% ;
+}
+
+.blog_div {
+    position: relative;
+}
+
+.blog_button {
+    position: absolute;
+    border-radius: 50px;
+    top: 25%;
+    left: 85.5%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 13px 50px;
+    transition: all 2s linear;
+}
+
+.blog_button:hover {
+    background-color: rgb(128, 128, 251);
+    color: black;
+}
+
+.blog_h2 {
+    display: block;
+    text-align: start;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.blogs_div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.blog_div_div {
+    margin-left: 30px;
+}
+
+.hr {
+    margin: 0 30px;
+}
+
+.blogs_button {
+    border: none;
+    background-color: transparent;
+}
+
+.blogs_div2 {
+    display: flex;
+    align-items: center;
+}
+
+.blog_like {
+    border: none;
+}
+
+.signup-lo {
+    margin-top: 12px;
+    margin-left: 200px;
+}
+
+.product_p {
+    transform: rotate(-90deg);
+    padding: 10px 77.5px;
+    top: 91px;
+    border-radius: 4px;
+    margin-left: -71px;
+    padding: 0;
+    width: 222px ;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_div {
+    display: flex;
+    align-items: start;
+}
+
+.product_div1 {
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.product_div2 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.product_button {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.product_div_button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.homedecor_p {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.homedecor_a {
+    margin-left: 5px;
+    color: rgb(128, 128, 251);
+}
+
+.homedecor_img {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.add-to-cart {
+    font-size: 11px;
+}
+
+.blog_p-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.blog-button-b {
+    margin-left: 10px;
+    color: rgb(233, 61, 61);
+}
+
+.hr_new {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.post-btn {
+    width: 200px;
+    height: 60px;
+}
+
+.post_button:hover {
+    background-color: rgb(208, 208, 254);
+    color: white;
+}
+
+.sele {
+    border: none;
+    background-color: transparent;
+}
+
+.total {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cart_div p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.price-total {
+    color: rgb(233, 61, 61);
+    margin-left: 5px;
+}
+
+.bag_button {
+    width: 200px;
+    color: red;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bag-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.signup_a {
+    color: rgb(128, 128, 251);
+}
+
+.no_products {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,19 @@
+{% extends "main.html" %} 
+{% block content %}
+{% include "header.html" %}
+  <h1>Basket</h1>
+    <div id="cart-container">
+        {% for item in cart_items %}
+            <div class="cart_div">
+                <p>- - {{ item.title }} (x{{ item.quantity }}) - <span class="price-total">{{ item.price|floatformat:2 }} USD</span></p>
+            </div>
+        {% endfor %}
+        <b class="total">Total amount: <span class="price-total">{{ total_price|floatformat:2 }} USD</span></b>
+        <div class="bag-container">
+            <form action="{% url 'clear_cart' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="bag_button">Clear</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

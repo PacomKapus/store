@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="signup_div">
+  <div class="signup_div1">
+    <h1 class="signup_h1">New account</h1>
+    <p class="signup_p">Already have an account? <a class="signup_a" href="{% url 'Login' %}"> Sign in</a></p>
+  <form method="POST" action="{% url 'Signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <img width="15px" height="15px" class="input_img_profile" src="/static/images/free-icon-web-page-1302960.png" alt="profile">
+    <div><button type="submit" class="signup_button">Create account</button></div> 
+  </form> 
+  </div>
+  <img width="555px" height="555px" class="signup_logo signup-lo" src="/static/images/clark-street-mercantile-qnKhZJPKFD8-unsplash.jpg" alt="logo">
+</div>
+{% endblock content %}

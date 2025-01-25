@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block content %}
+  <div class="profile">
+    <a href="{% url 'Home' %}"><button class="profile_button"><img width="12px" height="12px" class="profile_img" src="/static/images/free-icon-left-arrow-271218.png" alt="arrow"><h1 class="profile_h1">Back</h1></button></a>
+  </div>
+  <img class="profile_img1" width="1050px" height="250px" src="https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&w=600" alt="header">
+  <div class="profile_div"><img class="profile_img2" width="120px" height="120px" src="/static/images/free-icon-profile-3135768.png" alt="photo"></div>
+  <h1 class="profile_username">{{ request.user.username }}</h1>
+  <p class="profile_username profile_email">{{ request.user.email }}</p>
+  <a class="profile_login" href="{% url 'Login' %}"><button class="profile_login signup_button">Login</button></a>
+{% endblock content %}

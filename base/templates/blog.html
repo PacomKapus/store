@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block content %}
+  {% include "header.html" %}
+  <h1 class="blog_h1">Blog</h1>
+  <form class="blog_div" method="post" action="{% url 'Blog_views' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="blog_button" type="submit">Save</button>
+  </form>
+  {% for blog in blogs %}
+  <div class="blog_div_div"><div class="blogs_div"><img class="blog_img" width="40px" height="40px" src="/static/images/free-icon-user-profile-2734847.png" >
+    <h1 class="blog_h2">{{ request.user.username }}</h1></div>
+    <p class="blog_p-1">{{ blog.text }}</p>
+    <div class="blogs_div2">
+    <p>Likes: {{ blog.like.count }}</p>
+    <form method="post" action="{% url 'like_blog' blog.id %}" style="display:inline;">
+      {% csrf_token %}
+      {% if user in blog.like.all %}
+          <button class="blog_like" type="submit"><img width="20px" height="20px" src="/static/images/free-icon-heart-2107845.png" alt=""></button>
+      {% else %}
+          <button class="blog_like" type="submit"><img width="20px" height="20px" src="/static/images/free-icon-heart-shape-outline-25424.png" alt=""></button>
+      {% endif %}
+  </form>
+    <form method="post" action="{% url 'blog_delete' blog.id %}" style="display:inline;">
+      {% csrf_token %}
+      <button class="blogs_button" type="submit"><b class="blog-button-b">Delete</b></button>
+  </form>
+  </div>
+  </div>    
+  <hr class="hr hr_new">
+  {% endfor %}
+{% endblock content %}
